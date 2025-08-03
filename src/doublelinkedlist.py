@@ -1,30 +1,36 @@
 class Node:
     # Node init
+    # O(1), O(1)
     def __init__(self, data=None):
         self.data = data
         self.next = None
         self.prev = None
 
     # Method to check whether there is next node or not
+    # O(1), O(1)
     def has_next(self):
         return self.next is not None
 
     # Method to check whether there is prev node or not
+    # O(1), O(1)
     def has_prev(self):
         return self.prev is not None
 
 class DoubleLinkedList:
     # Double-Linked list init
+    # O(1), O(1)
     def __init__(self):
         self.head = None
         self.tail = None
         self._size = 0
 
     # Method to check whether current list is empty or not
+    # O(1), O(1)
     def is_empty(self):
         return self._size == 0
 
     # Method which adds object at the beginning of the list
+    # O(1), O(1)
     def insert(self, data):
         new_node = Node(data)
 
@@ -38,6 +44,7 @@ class DoubleLinkedList:
             self.head = new_node
 
     # Method which adds object at the end of the list
+    # O(1), O(1)
     def append(self, data):
         new_node = Node(data)
         if self.tail is None:
@@ -49,6 +56,7 @@ class DoubleLinkedList:
         self._size += 1
 
     # Method to delete certain object in the list
+    # O(n), O(1)
     def delete(self, data):
         current = self.head
         while current:
@@ -68,6 +76,7 @@ class DoubleLinkedList:
         return False  # Not found lol
 
     # Method to search certain object in the list
+    # O(n), O(1)
     def search(self, data):
         current = self.head
         while current:
@@ -78,14 +87,17 @@ class DoubleLinkedList:
             return False
 
     # Method to clear whole list (re-init itself)
+    # O(1), O(1)
     def clear(self):
         self.__init__()
 
     # Method to check actual size of current list
+    # O(1), O(1)
     def __len__(self):
         return self._size
 
     # Method to display all the elements from beginning to end
+    # O(n), O(1)
     def traverse_forward(self):
         current = self.head
         while current:
@@ -94,6 +106,7 @@ class DoubleLinkedList:
         print("None")
 
     # Method to display all the elements from end to beginning
+    # O(n), O(1)
     def traverse_backward(self):
         current = self.tail
         while current:

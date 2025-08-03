@@ -1,25 +1,30 @@
 class Node:
     # Node init
+    # O(1), O(1)
     def __init__(self, data):
         self.data = data
         self.next = None
 
     # Method to check whether there is next node or not
+    # O(1), O(1)
     def has_next(self):
         return self.next is not None
 
 
 class LinkedList:
     # Linked list init
+    # O(1), O(1)
     def __init__(self):
         self.head = None
         self._size = 0
 
     # Method to check whether current list is empty or not
+    # O(1), O(1)
     def is_empty(self):
         return self._size == 0
 
     # Method which adds object at the end of the list
+    # O(n), O(1)
     def append(self, data):
         new_node = Node(data)
         if not self.head:
@@ -32,6 +37,7 @@ class LinkedList:
         self._size += 1
 
     # Method which adds object at the beginning of the list
+    # O(1), O(1)
     def insert(self, data):
         new_node = Node(data)
 
@@ -45,6 +51,7 @@ class LinkedList:
 
 
     # Method to search certain object in the list
+    # O(n), O(1)
     def search(self, data=None):
         index = 0
         current = self.head
@@ -59,6 +66,7 @@ class LinkedList:
             return False
 
     # Method to remove first object in the list
+    # O(1), O(1)
     def remove_first(self):
         if self.head is None:
             return
@@ -66,6 +74,7 @@ class LinkedList:
         self._size -= 1
 
     # Method to remove last object in the list
+    # O(1), O(1)
     def remove_last(self):
         if self.head is None:
             return
@@ -76,6 +85,7 @@ class LinkedList:
         self._size -= 1
 
     # Method to delete certain object in the list
+    # O(n), O(1)
     def delete(self, data):
         if self.head is None: # Check if list is empty
             return
@@ -96,14 +106,17 @@ class LinkedList:
             self._size -= 1
 
     # Method to clear whole list (re-init itself)
+    # O(1), O(1)
     def clear(self):
         self.__init__()
 
     # Method to check actual size of current list
+    # O(1), O(1)
     def __len__(self):
         return self._size
 
     # Method to output whole list
+    # O(n), O(n)
     def display(self):
         elements = []
         current = self.head

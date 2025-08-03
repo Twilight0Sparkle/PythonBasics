@@ -1,14 +1,17 @@
 class Node:
+  # O(1), O(1)
   def __init__(self, value):
     self.value = value
     self.next = None
 
 class Stack:
+  # O(1), O(1)
   def __init__(self):
     self.head = None
     self._size = 0
 
   # Method to add item into stack
+  # O(1), O(1)
   def push(self, value):
     new_node = Node(value)
     if self.head:
@@ -17,6 +20,7 @@ class Stack:
     self._size += 1
 
   # Method to remove the most recently added item and return its value
+  # O(1), O(1)
   def pop(self):
     if self.is_empty():
       return None
@@ -26,21 +30,26 @@ class Stack:
     return popped_node.value
 
   # Method to get value of top item
+  # O(1), O(1)
   def peek(self):
     if self.is_empty():
       return None
     return self.head.value
 
+  # O(1), O(1)
   def is_empty(self):
     return self._size == 0
 
+  # O(1), O(1)
   def clear(self):
     self.__init__()
 
+  # O(1), O(1)
   def __len__(self):
     return self._size
 
   # Method to display current stack
+  # O(n), O(1)
   def traverse(self):
     current = self.head
     while current:
