@@ -1,4 +1,5 @@
 class Node:
+  
     # Node init
     # O(1), O(1)
     def __init__(self, data):
@@ -10,8 +11,8 @@ class Node:
     def has_next(self):
         return self.next is not None
 
-
 class LinkedList:
+  
     # Linked list init
     # O(1), O(1)
     def __init__(self):
@@ -67,6 +68,7 @@ class LinkedList:
 
     # Method to remove first object in the list
     # O(1), O(1)
+
     def remove_first(self):
         if self.head is None:
             return
