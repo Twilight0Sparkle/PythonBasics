@@ -77,6 +77,9 @@ class LinkedList:
 
     # Method to delete certain object in the list
     def delete(self, data):
+        if self.head is None: # Check if list is empty
+            return
+
         current = self.head
 
         # Check if the head node contains the specified data
@@ -113,6 +116,7 @@ class LinkedList:
 
 if __name__ == '__main__':
     my_list = LinkedList() # List init
+    my_list.delete(10)
     my_list.append(30) # Add new object at the end of the list
     my_list.append(40) # ^^^
     my_list.append(50) # ^^^

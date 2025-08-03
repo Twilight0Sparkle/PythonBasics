@@ -106,6 +106,7 @@ class DoubleLinkedList:
 if __name__ == "__main__":
     my_list = DoubleLinkedList()
 
+    my_list.delete(10)
     my_list.insert(20)
     my_list.insert(30)
     my_list.append(10)
